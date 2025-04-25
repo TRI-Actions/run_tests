@@ -16,3 +16,24 @@ inputs:
   container_dir:
     description: "Path where to deploy files inside container"
 ```
+
+## How to use in Actions Workflow
+
+  jobs:
+    pipeline:
+      runs-on: ubuntu-latest
+      name: my-pipeline
+      permissions: write-all
+   
+      steps:
+        - name: run composite module
+          uses: TRI-Actions/run_tests@main
+          with:
+            test_path: /my_path
+            starting_file: dockerfile_path
+            local_container_path: /local_docker
+            container_dir: /test_path
+
+
+
+
