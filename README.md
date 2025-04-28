@@ -19,6 +19,7 @@ inputs:
 
 ## How to use in Actions Workflow
 
+```
   jobs:
     pipeline:
       runs-on: ubuntu-latest
@@ -33,7 +34,7 @@ inputs:
             starting_file: dockerfile_path
             local_container_path: /local_docker
             container_dir: /test_path
-
+```
 
 
 
